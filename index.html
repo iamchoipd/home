@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#ecf9fb" />
+<title>두런두런 배움학교 | 학습 월드맵</title>
+<style>
+:root{font-family:'Pretendard','Noto Sans KR',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;color:#18354b;background:#e7f7f5}*{box-sizing:border-box}body{margin:0;overflow:hidden}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #f59e0b;outline-offset:3px}.app{height:100dvh;display:flex;flex-direction:column;overflow:hidden;background:#e6f8f2}.top{z-index:3;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px clamp(12px,3vw,32px);background:#fffefb;border-bottom:3px solid #c8ece4;box-shadow:0 4px 22px #1c5a4420}.brand{display:flex;align-items:center;gap:11px;min-width:0}.logo{width:49px;height:49px;border-radius:16px;background:#fff1bf;display:grid;place-items:center;font-size:29px;box-shadow:inset 0 -4px #e1c66b}.brand h1{font-size:clamp(17px,2.3vw,25px);margin:0;font-weight:900;letter-spacing:-.7px}.brand p{margin:3px 0 0;color:#67818a;font-size:12px;font-weight:650}.topright{display:flex;gap:8px;align-items:center;flex-shrink:0}.pill,.topbtn{border:1px solid #d6eae7;background:#fff;border-radius:14px;padding:10px 13px;font-size:13px;font-weight:800;color:#295568}.pill{background:#e7f9f0;border-color:#caeddb}.topbtn:hover,.quick button:hover{background:#f1fbf8}.main{position:relative;flex:1;min-height:0;overflow:hidden;background:#9edab1;touch-action:none}canvas{width:100%;height:100%;display:block;touch-action:none}.notice{position:absolute;top:15px;left:50%;transform:translateX(-50%);background:#fffefaeb;padding:10px 18px;border:2px solid #e1f1df;border-radius:999px;box-shadow:0 5px 18px #25583c22;font-size:13px;font-weight:800;white-space:nowrap;pointer-events:none;text-align:center;max-width:95%;overflow:hidden;text-overflow:ellipsis}.quick{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:8px;background:#ffffffeb;padding:9px;border-radius:19px;box-shadow:0 10px 28px #26574335;max-width:calc(100% - 20px);overflow-x:auto;scrollbar-width:thin}.quick button{white-space:nowrap;background:#fff;border:1px solid #dceae6;border-radius:12px;padding:11px 13px;font-weight:850;color:#27515e}.quick button span{margin-right:5px}.dpad{position:absolute;bottom:91px;left:16px;display:none;width:132px;height:132px;user-select:none;touch-action:none}.dpad button{position:absolute;width:42px;height:42px;border:2px solid #fff;background:#ffffffd9;border-radius:13px;color:#35695f;font-size:20px;font-weight:900;box-shadow:0 4px 8px #1c4b3830;touch-action:none}.dpad .up{top:0;left:45px}.dpad .down{bottom:0;left:45px}.dpad .left{top:45px;left:0}.dpad .right{top:45px;right:0}.tip{position:absolute;right:17px;bottom:93px;border-radius:13px;background:#fffefaeb;color:#3e6670;padding:11px 13px;font-size:12px;box-shadow:0 3px 12px #284b2630}.overlay{position:fixed;inset:0;z-index:10;background:#153d4c80;display:flex;justify-content:center;align-items:center;padding:15px;backdrop-filter:blur(4px)}.overlay[hidden]{display:none}.modal{width:min(600px,100%);max-height:min(800px,calc(100dvh - 30px));display:flex;flex-direction:column;border-radius:24px;background:#fffefb;box-shadow:0 30px 90px #0d2a3360;overflow:hidden}.modalhead{padding:21px 23px 14px;background:linear-gradient(135deg,#f5fff5,#e3f6ff);border-bottom:1px solid #e3ecec}.row{display:flex;justify-content:space-between;align-items:center;gap:12px}.modal h2{margin:0;font-size:24px;letter-spacing:-.8px}.muted{color:#66818c;font-size:13px;margin:8px 0 0}.close{width:38px;height:38px;flex-shrink:0;border:none;border-radius:12px;background:#fff;color:#335968;font-size:27px;line-height:1}.modalbody{padding:18px 21px 22px;overflow-y:auto;overscroll-behavior:contain}.search{width:100%;border:2px solid #dcebe7;border-radius:14px;padding:13px 15px;outline:none;background:#fff;font-size:15px;margin-bottom:15px}.search:focus{border-color:#64b4ad}.apps{display:grid;gap:10px}.entry{display:flex;gap:12px;align-items:center;padding:13px 14px;border:2px solid #e5eeeb;border-radius:15px;background:#fff;text-decoration:none;color:inherit;transition:transform .15s,border-color .15s,background .15s}.entry:hover{transform:translateY(-1px);background:#f6fffa;border-color:#9cdcc2}.entry .ico{display:grid;place-items:center;width:41px;height:41px;border-radius:12px;background:#e8f6f4;font-size:22px;flex-shrink:0}.entry .entrymain{flex:1;min-width:0}.entry strong{display:block;font-size:15px;line-height:1.35;word-break:keep-all}.entry small{display:block;margin-top:5px;color:#7b9299;font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.entry .arrow{font-size:19px;color:#559d91}.empty{text-align:center;padding:30px;color:#718a8d}.foot{text-align:center;padding:12px;border-top:1px solid #eaf0eb;background:#fbfdfa;font-size:12px;color:#68858a}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(hover:none),(pointer:coarse){.dpad{display:block}.tip{display:none}}@media(max-width:650px){.top{padding:9px 10px}.logo{width:40px;height:40px;border-radius:12px;font-size:23px}.brand{gap:7px}.brand h1{font-size:17px}.brand p{font-size:10px}.pill{display:none}.topbtn{padding:9px;font-size:12px}.notice{font-size:11px;top:10px;padding:9px 12px}.quick{bottom:10px;gap:5px;padding:6px;border-radius:13px}.quick button{font-size:12px;padding:9px 10px}.dpad{bottom:76px;left:10px;transform:scale(.85);transform-origin:bottom left}.modalhead{padding:17px}.modalbody{padding:13px}.entry{padding:12px}.modal h2{font-size:21px}}@media(max-height:510px){.notice{display:none}.dpad{bottom:60px;transform:scale(.68);transform-origin:bottom left}.quick{bottom:5px}.tip{display:none}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+  <div class="brand"><div class="logo" aria-hidden="true">🏫</div><div><h1>두런두런 배움학교</h1><p>걷고, 찾고, 즐겁게 배우는 학습 월드</p></div></div>
+  <div class="topright"><span class="pill">📚 학습 프로그램 19개</span><button class="topbtn" id="helpBtn">❔ 사용법</button></div>
+</header>
+<main class="main" id="stage" aria-label="두런두런 배움학교의 가상 학교 지도">
+  <canvas id="world" aria-label="네 건물 중 하나를 클릭하거나 아바타를 움직여 입장하세요"></canvas>
+  <div class="notice" id="notice" role="status">🏫 건물을 터치하면 학습 프로그램을 선택할 수 있어요!</div>
+  <div class="dpad" aria-label="아바타 이동 버튼"><button class="up" data-dir="up" aria-label="위로 이동">▲</button><button class="down" data-dir="down" aria-label="아래로 이동">▼</button><button class="left" data-dir="left" aria-label="왼쪽으로 이동">◀</button><button class="right" data-dir="right" aria-label="오른쪽으로 이동">▶</button></div>
+  <div class="tip">⌨️ 방향키 / WASD로 이동 · 건물 클릭으로 입장</div>
+  <nav class="quick" aria-label="교실 바로가기">
+    <button data-go="grade1"><span>🔢</span>1학년</button><button data-go="grade3"><span>📝</span>3학년</button><button data-go="grade4"><span>📐</span>4학년</button><button data-go="language"><span>🌍</span>어학</button>
+  </nav>
+</main>
+</div>
+<div class="overlay" id="overlay" hidden>
+  <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modalhead"><div class="row"><h2 id="modalTitle"></h2><button class="close" id="closeBtn" aria-label="닫기">×</button></div><p class="muted" id="modalSub"></p></div>
+    <div class="modalbody" id="modalBody"></div>
+    <div class="foot" id="modalFoot">학습 프로그램은 새 탭에서 열립니다. 이 지도로 언제든 돌아올 수 있어요.</div>
+  </section>
+</div>
+<script>
+'use strict';
+// 새 학습 프로그램을 추가하려면 아래 APPS에 {title, url} 한 줄을 추가하세요.
+const APPS = {
+  grade1: [
+    {title:'한글 읽기 연습',url:'https://iamchoipd.github.io/han'},
+    {title:'세 수 계산하기',url:'https://iamchoipd.github.io/plus'},
+    {title:'홀짝 구분하기',url:'https://iamchoipd.github.io/holjjak'},
+    {title:'10의 짝꿍수 덧셈·뺄셈',url:'https://iamchoipd.github.io/10plus'},
+    {title:'10의 짝꿍수 덧셈·뺄셈 · 전자칠판',url:'https://iamchoipd.github.io/10plus_bb'},
+    {title:'1학년 수학교실',url:'https://iamchoipd.github.io/1suhak'},
+    {title:'시계보기',url:'https://iamchoipd.github.io/clock'},
+    {title:'시계보기 · 전자칠판',url:'https://iamchoipd.github.io/clock_bb'},
+    {title:'무한 문장제 문제',url:'https://iamchoipd.github.io/1mun'},
+    {title:'무한 문장제 문제 · 전자칠판',url:'https://iamchoipd.github.io/1munbb'}
+  ],
+  grade3: [
+    {title:'이어주는 말',url:'https://iamchoipd.github.io/andbut'},
+    {title:'이어주는 말 · 전자칠판',url:'https://iamchoipd.github.io/andbut_bb'},
+    {title:'3학년 수학교실',url:'https://iamchoipd.github.io/3gop'}
+  ],
+  grade4: [
+    {title:'가분수, 대분수',url:'https://iamchoipd.github.io/bunsu'},
+    {title:'사각형 OX 도전',url:'https://iamchoipd.github.io/4gak'}
+  ],
+  language: [
+    {title:'한자 7급',url:'https://iamchoipd.github.io/hanja'},
+    {title:'파닉스',url:'https://iamchoipd.github.io/phonics'},
+    {title:'일본어 첫걸음',url:'https://iamchoipd.github.io/jap'},
+    {title:'영단어',url:'https://iamchoipd.github.io/word1'}
+  ]
+};
+const BUILDINGS = [
+  {id:'grade1',title:'1학년 교실',icon:'🔢',color:'#ffcf68',roof:'#e98961',x:340,y:275,w:280,h:210},
+  {id:'grade3',title:'3학년 교실',icon:'📝',color:'#addef8',roof:'#648fc7',x:1160,y:275,w:280,h:210},
+  {id:'grade4',title:'4학년 교실',icon:'📐',color:'#f8c1db',roof:'#c66b9a',x:340,y:810,w:280,h:210},
+  {id:'language',title:'어학 교실',icon:'🌍',color:'#d5c6f7',roof:'#9077cd',x:1160,y:810,w:280,h:210}
+];
+const W=1500,H=1100;
+const stage=document.getElementById('stage'),canvas=document.getElementById('world'),ctx=canvas.getContext('2d');
+const overlay=document.getElementById('overlay'),modalTitle=document.getElementById('modalTitle'),modalSub=document.getElementById('modalSub'),modalBody=document.getElementById('modalBody'),modalFoot=document.getElementById('modalFoot');
+let player={x:750,y:555},camera={x:750,y:555},view={w:1,h:1,scale:1},keys=new Set(),pointerTarget=null,clock=0,last=performance.now(),modalOpen=false,lastFocus=null;
+const decor=[];let seed=2763;function rng(){seed=(seed*1664525+1013904223)>>>0;return seed/4294967296}
+for(let i=0;i<118;i++){const x=50+rng()*1400,y=60+rng()*960;const near=BUILDINGS.some(b=>Math.abs(x-b.x)<b.w/2+48&&Math.abs(y-b.y)<b.h/2+64);if(!near&&Math.abs(x-750)>125&&Math.abs(y-550)>90)decor.push({x,y,type:rng()>.33?'tree':'flower',v:rng()})}
+function roundRect(x,y,w,h,r,fill,stroke,lw=1){ctx.beginPath();ctx.roundRect(x,y,w,h,r);if(fill){ctx.fillStyle=fill;ctx.fill()}if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=lw;ctx.stroke()}}
+function circle(x,y,r,c){ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fillStyle=c;ctx.fill()}
+function text(s,x,y,size,color,weight='800',align='center'){ctx.fillStyle=color;ctx.font=`${weight} ${size}px system-ui, sans-serif`;ctx.textAlign=align;ctx.textBaseline='middle';ctx.fillText(s,x,y)}
+function drawRoad(){ctx.strokeStyle='#dfcba3';ctx.lineWidth=124;ctx.lineCap='round';ctx.lineJoin='round';ctx.beginPath();ctx.moveTo(750,180);ctx.lineTo(750,945);ctx.moveTo(340,550);ctx.lineTo(1160,550);ctx.stroke();ctx.strokeStyle='#fff0cd';ctx.lineWidth=102;ctx.stroke();ctx.strokeStyle='#eadab6';ctx.lineWidth=4;ctx.setLineDash([12,23]);ctx.beginPath();ctx.moveTo(750,150);ctx.lineTo(750,950);ctx.moveTo(200,550);ctx.lineTo(1300,550);ctx.stroke();ctx.setLineDash([])}
+function drawTree(d){const s=.7+d.v*.55;ctx.save();ctx.translate(d.x,d.y);ctx.scale(s,s);roundRect(-5,4,10,27,3,'#99724c');circle(-13,-4,21,'#65b57f');circle(14,-6,23,'#55a86d');circle(0,-20,25,'#80ca91');circle(-8,-24,7,'#b2e6ad');ctx.restore()}
+function drawFlower(d){circle(d.x,d.y,4,d.v>.5?'#fff0f0':'#ffe27b');circle(d.x-3,d.y-3,3,'#fff');circle(d.x+3,d.y-3,3,'#fff');circle(d.x,d.y,2,'#e7ad39')}
+function drawBuilding(b){const {x,y,w,h,roof,color}=b;ctx.save();ctx.translate(x,y);roundRect(-w/2+7,-h/2+26,w-14,h-12,17,'#36734a33');roundRect(-w/2,-h/2+20,w,h-25,18,'#fffefa','#e2efe1',3);roundRect(-w/2+9,-h/2+38,w-18,h-53,13,color);ctx.beginPath();ctx.moveTo(-w/2-19,-h/2+45);ctx.lineTo(-w/2+30,-h/2-29);ctx.lineTo(w/2-30,-h/2-29);ctx.lineTo(w/2+19,-h/2+45);ctx.closePath();ctx.fillStyle=roof;ctx.fill();ctx.lineWidth=5;ctx.strokeStyle='#ffffffad';ctx.stroke();for(let dx of [-85,85]){roundRect(dx-27,-h/2+74,54,48,9,'#e7ffff','#ffffff',5);ctx.strokeStyle='#b5dce8';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(dx,-h/2+77);ctx.lineTo(dx,-h/2+119);ctx.stroke()}roundRect(-43,12,86,75,11,'#fff3d1','#ffffff',5);roundRect(-32,22,64,65,7,'#9d704b');circle(19,57,4,'#fee8ab');roundRect(-100,-h/2+47,200,43,13,'#fffefa','#ffffff',2);text(b.icon+' '+b.title,0,-h/2+69,25,'#345366','900');roundRect(-65,90,130,28,14,'#ffffff','#c1e5d8',2);text(`${APPS[b.id].length}개 프로그램`,0,105,15,'#456d69');ctx.restore()}
+function drawPlayer(){const {x,y}=player;ctx.save();ctx.translate(x,y);const bob=Math.sin(clock*.006)*2;circle(0,11,24,'#437b6544');ctx.translate(0,bob);roundRect(-18,-11,36,38,12,'#3d9cd8','#fff',2);circle(0,-34,24,'#ffd7ae');ctx.fillStyle='#59453f';ctx.beginPath();ctx.arc(0,-40,24,Math.PI,Math.PI*2);ctx.fill();circle(-8,-33,2.6,'#4b3e39');circle(8,-33,2.6,'#4b3e39');ctx.strokeStyle='#aa6357';ctx.lineWidth=2;ctx.beginPath();ctx.arc(0,-29,6,.2,Math.PI-.2);ctx.stroke();roundRect(-34,-88,68,24,11,'#ffffff','#b5daca',2);text('나',0,-76,14,'#3e6663');ctx.restore()}
+function draw(){const rect=stage.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1,2);if(canvas.width!==Math.round(rect.width*dpr)||canvas.height!==Math.round(rect.height*dpr)){canvas.width=Math.round(rect.width*dpr);canvas.height=Math.round(rect.height*dpr)}view.w=rect.width;view.h=rect.height;view.scale=Math.max(.58,Math.min(1.08,rect.width<600?.75:rect.width/1350));camera.x+=(player.x-camera.x)*.1;camera.y+=(player.y-camera.y)*.1;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,view.w,view.h);ctx.save();ctx.translate(view.w/2-view.scale*camera.x,view.h/2-view.scale*camera.y);ctx.scale(view.scale,view.scale);ctx.fillStyle='#aadbb0';ctx.fillRect(-400,-400,W+800,H+800);for(let x=-150;x<W+200;x+=92)for(let y=-150;y<H+200;y+=92){circle(x+((Math.round(y/92)%2)*32),y,2,'#8bca9c')}drawRoad();roundRect(625,425,250,260,42,'#eff5d3','#e7f6db',10);circle(750,550,91,'#d6eecc');circle(750,550,73,'#f8f4d5');text('두런두런',750,505,30,'#46746d','900');text('배움학교',750,546,34,'#367665','900');text('🌱 즐거운 배움의 시작 🌱',750,594,16,'#6b9782');decor.forEach(d=>d.type==='tree'?drawTree(d):drawFlower(d));BUILDINGS.forEach(drawBuilding);drawPlayer();ctx.restore()}
+function clamp(n,a,b){return Math.max(a,Math.min(b,n))}
+function update(dt){const speed=275*dt/1000;let dx=0,dy=0;if(keys.has('ArrowLeft')||keys.has('a')||keys.has('left'))dx--;if(keys.has('ArrowRight')||keys.has('d')||keys.has('right'))dx++;if(keys.has('ArrowUp')||keys.has('w')||keys.has('up'))dy--;if(keys.has('ArrowDown')||keys.has('s')||keys.has('down'))dy++;if(dx||dy){pointerTarget=null;const len=Math.hypot(dx,dy);player.x+=dx/len*speed;player.y+=dy/len*speed}else if(pointerTarget){let tx=pointerTarget.x-player.x,ty=pointerTarget.y-player.y,dist=Math.hypot(tx,ty);if(dist<speed+7){player.x=pointerTarget.x;player.y=pointerTarget.y;pointerTarget=null}else{player.x+=tx/dist*speed;player.y+=ty/dist*speed}}player.x=clamp(player.x,40,W-40);player.y=clamp(player.y,80,H-40);if(!modalOpen){for(const b of BUILDINGS){const ex=Math.abs(player.x-b.x)<42,ey=Math.abs(player.y-(b.y+80))<25;if(ex&&ey&&pointerTarget===null&&keys.size>0){keys.clear();openRoom(b.id);break}}}}
+function frame(t){const dt=Math.min(t-last,40);last=t;clock=t;if(!modalOpen)update(dt);draw();requestAnimationFrame(frame)}
+function scenePoint(e){const r=canvas.getBoundingClientRect();return{x:(e.clientX-r.left-view.w/2)/view.scale+camera.x,y:(e.clientY-r.top-view.h/2)/view.scale+camera.y}}
+canvas.addEventListener('pointerup',e=>{if(modalOpen)return;const p=scenePoint(e);const b=BUILDINGS.find(b=>Math.abs(p.x-b.x)<b.w/2+22&&Math.abs(p.y-b.y)<b.h/2+45);if(b){openRoom(b.id);return}pointerTarget={x:clamp(p.x,40,W-40),y:clamp(p.y,80,H-40)}});
+window.addEventListener('keydown',e=>{if(modalOpen){if(e.key==='Escape')closeModal();return}let k=e.key.length===1?e.key.toLowerCase():e.key;if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','w','a','s','d'].includes(k)){keys.add(k);e.preventDefault()}});
+window.addEventListener('keyup',e=>keys.delete(e.key.length===1?e.key.toLowerCase():e.key));window.addEventListener('blur',()=>keys.clear());
+document.querySelectorAll('[data-dir]').forEach(b=>{const dir=b.dataset.dir;const end=e=>{keys.delete(dir);if(b.hasPointerCapture?.(e.pointerId))b.releasePointerCapture(e.pointerId)};b.addEventListener('pointerdown',e=>{e.preventDefault();keys.add(dir);b.setPointerCapture(e.pointerId)});b.addEventListener('pointerup',end);b.addEventListener('pointercancel',end);b.addEventListener('lostpointercapture',()=>keys.delete(dir))});
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>openRoom(b.dataset.go)));
+function openRoom(id){const b=BUILDINGS.find(b=>b.id===id);if(!b)return;lastFocus=document.activeElement;modalOpen=true;keys.clear();pointerTarget=null;modalTitle.textContent=`${b.icon} ${b.title}`;modalSub.textContent=`배우고 싶은 프로그램을 선택해 주세요. · 총 ${APPS[id].length}개`;modalFoot.textContent='프로그램은 새 탭에서 열려요. 학습을 마친 후 이 탭으로 돌아오세요.';modalBody.replaceChildren();const input=document.createElement('input');input.className='search';input.type='search';input.placeholder='🔎 프로그램 이름 검색';input.setAttribute('aria-label','프로그램 검색');const list=document.createElement('div');list.className='apps';modalBody.append(input,list);function render(q=''){list.replaceChildren();const entries=APPS[id].filter(a=>a.title.toLowerCase().includes(q.trim().toLowerCase()));if(!entries.length){const empty=document.createElement('p');empty.className='empty';empty.textContent='검색 결과가 없어요.';list.append(empty);return}for(let i=0;i<entries.length;i++){const a=entries[i],link=document.createElement('a');link.className='entry';link.href=a.url;link.target='_blank';link.rel='noopener noreferrer';link.setAttribute('aria-label',a.title+' (새 탭에서 열기)');const ico=document.createElement('span');ico.className='ico';ico.textContent=a.title.includes('전자칠판')?'🖥️':id==='language'?'🔤':id==='grade1'?'🌟':id==='grade3'?'✏️':'📏';const mid=document.createElement('span');mid.className='entrymain';const strong=document.createElement('strong');strong.textContent=a.title;const small=document.createElement('small');small.textContent=a.url;mid.append(strong,small);const arrow=document.createElement('span');arrow.className='arrow';arrow.textContent='↗';link.append(ico,mid,arrow);list.append(link)}}input.addEventListener('input',()=>render(input.value));render();overlay.hidden=false;document.getElementById('closeBtn').focus()}
+function closeModal(){overlay.hidden=true;modalOpen=false;keys.clear();lastFocus?.focus?.()}
+document.getElementById('closeBtn').addEventListener('click',closeModal);overlay.addEventListener('pointerdown',e=>{if(e.target===overlay)closeModal()});document.getElementById('helpBtn').addEventListener('click',()=>{lastFocus=document.activeElement;modalOpen=true;keys.clear();modalTitle.textContent='🧭 배움학교 사용법';modalSub.textContent='누구나 링크 하나로 이용할 수 있어요.';modalBody.innerHTML='<div style="line-height:1.9;font-size:15px"><p><b>① 건물을 선택하세요.</b><br>지도 위 교실을 누르거나 아래 교실 바로가기를 사용하세요.</p><p><b>② 아바타를 움직일 수도 있어요.</b><br>PC에서는 방향키 또는 WASD, 스마트폰에서는 방향 버튼이나 이동할 지점을 터치해 주세요.</p><p><b>③ 학습 프로그램을 실행하세요.</b><br>목록에서 프로그램을 누르면 새 탭에서 열립니다. 학습 후 원래 탭으로 돌아오면 됩니다.</p><p><b>④ 다른 사람과 동시에 사용할 수 있어요.</b><br>각자는 자신의 지도와 학습 프로그램을 독립적으로 사용합니다. 아바타는 다른 사람에게 보이지 않습니다.</p></div>';modalFoot.textContent='로그인 없이 시작할 수 있습니다.';overlay.hidden=false;document.getElementById('closeBtn').focus()});
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>
