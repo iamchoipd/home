@@ -13,7 +13,7 @@
 <div class="app">
 <header class="top">
   <div class="brand"><div class="logo" aria-hidden="true">🏫</div><div><h1>두런두런 배움학교</h1><p>걷고, 찾고, 즐겁게 배우는 학습 월드</p></div></div>
-  <div class="topright"><span class="pill">📚 학습 프로그램 19개</span><button class="topbtn" id="helpBtn">❔ 사용법</button></div>
+  <div class="topright"><span class="pill">📚 학습 프로그램 21개</span><button class="topbtn" id="helpBtn">❔ 사용법</button></div>
 </header>
 <main class="main" id="stage" aria-label="두런두런 배움학교의 가상 학교 지도">
   <canvas id="world" aria-label="네 건물 중 하나를 클릭하거나 아바타를 움직여 입장하세요"></canvas>
@@ -37,6 +37,7 @@
 // 새 학습 프로그램을 추가하려면 아래 APPS에 {title, url} 한 줄을 추가하세요.
 const APPS = {
   grade1: [
+    {title:'GAS 수학교실',url:'https://script.google.com/macros/s/AKfycbz-Ovi-ApPZzKd3cYANkqb0RY2iuG2cr6HwRhx8giHAlW3ZFjRtPW7qpcunxE5kk9oP/exec'},
     {title:'한글 읽기 연습',url:'https://iamchoipd.github.io/han'},
     {title:'세 수 계산하기',url:'https://iamchoipd.github.io/plus'},
     {title:'홀짝 구분하기',url:'https://iamchoipd.github.io/holjjak'},
@@ -49,6 +50,7 @@ const APPS = {
     {title:'무한 문장제 문제 · 전자칠판',url:'https://iamchoipd.github.io/1munbb'}
   ],
   grade3: [
+    {title:'GAS 수학교실',url:'https://script.google.com/macros/s/AKfycbx8QWjMWL-IJJfRuljieQpotTBIqC9aavVr9sr1x2sCbPX83kF-UmF-6MmcgdmENonjyA/exec'},
     {title:'이어주는 말',url:'https://iamchoipd.github.io/andbut'},
     {title:'이어주는 말 · 전자칠판',url:'https://iamchoipd.github.io/andbut_bb'},
     {title:'3학년 수학교실',url:'https://iamchoipd.github.io/3gop'}
